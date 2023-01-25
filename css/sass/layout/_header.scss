@@ -1,0 +1,23 @@
+header {
+  .navbar-toggler {
+    color: $maincolor;
+  }
+  .navbar-nav {
+    display: flex;
+    gap: 20px;
+    justify-content: end;
+    @media #{$mobil} {
+      gap: 0;
+    }
+    @media #{$tablt} {
+      gap: 0;
+    }
+  }
+  .nav-link {
+    color: $maincolor;
+    font: {
+      size: 15px;
+      weight: bold;
+    }
+  }
+}

@@ -1,0 +1,362 @@
+.landing {
+  min-height: 580px;
+  background-color: $bg;
+  .container {
+    position: relative;
+  }
+  .text {
+    position: absolute;
+    left: 0px;
+    top: 80px;
+    z-index: 5;
+    h2 {
+      span {
+        -webkit-text-stroke: 0.4px white;
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        width: 170px;
+        height: 7px;
+        background-color: $hoverColor;
+        left: 0;
+        top: 35%;
+        z-index: -1;
+        border-radius: 15px;
+      }
+    }
+    p {
+      width: 310px;
+      span {
+        font-weight: bold;
+        color: $maincolor;
+      }
+    }
+    .animated {
+      position: absolute;
+      left: -40px;
+      top: 0px;
+      z-index: 4;
+    }
+  }
+  .image {
+    position: absolute;
+    right: 8%;
+    z-index: 2;
+    img {
+      max-width: 100%;
+    }
+    button {
+      position: absolute;
+      right: 12px;
+      bottom: 2px;
+      border: none;
+      background-color: $maincolor;
+      height: 152px;
+      width: 140px;
+      text-align: center;
+      color: white;
+      font-weight: bold;
+      border-radius: 10px;
+      z-index: 2;
+    }
+    .animated {
+      right: -40px;
+      position: absolute;
+      bottom: -50px;
+      z-index: 1;
+    }
+  }
+  @media #{$smallScreen} {
+    & {
+      min-height: 820px;
+    }
+  }
+  @media #{$tablt} {
+    & {
+      min-height: 400px !important;
+    }
+  }
+  @media #{$mobil} {
+    & {
+      min-height: 500px !important;
+    }
+    .row {
+      h2 {
+        &::before {
+          display: none;
+        }
+      }
+    }
+  }
+  .row {
+    @media #{$smallScreen} {
+      .animated,
+      br,
+      p {
+        display: none;
+      }
+      .text {
+        text-align: center;
+        width: 100%;
+        h2 {
+          &::before {
+            top: 70%;
+            left: 20%;
+          }
+          span {
+            -webkit-text-stroke: $maincolor 0px;
+          }
+        }
+      }
+      .image {
+        right: 0;
+        width: 100%;
+        margin-top: 20%;
+      }
+    }
+    @media #{$tablt} {
+      .text {
+        h2 {
+          &::before {
+            left: 28%;
+          }
+        }
+        p {
+          display: block;
+          margin: auto;
+          margin-top: 20px;
+        }
+      }
+      .image {
+        display: none;
+      }
+    }
+  }
+}
+// ################ section creativity ################
+.Creativity {
+  background-color: $bg;
+  .text {
+    margin-top: 7%;
+    pre {
+      line-height: 60px;
+      span {
+        color: $hoverColor;
+      }
+    }
+    button {
+      margin-bottom: 20px;
+      @media #{$mobil} {
+        margin: auto;
+        margin-bottom: 20px;
+      }
+    }
+  }
+  .image {
+    img {
+      max-width: 100%;
+    }
+  }
+}
+// ################ section feilds ################
+.feilds {
+  position: relative;
+  .container {
+    &::before {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 50%;
+      background-color: $bg;
+      z-index: -1;
+      top: 13%;
+      left: 0;
+      @media #{$tablt} {
+        top: 19%;
+        height: 59%;
+      }
+      @media #{$mobil} {
+        top: 3.5%;
+        height: 97%;
+      }
+    }
+  }
+  .text {
+    width: 40%;
+    @media #{$mobil} {
+      width: 100%;
+      text-align: center;
+    }
+  }
+  .row {
+    margin-top: 15px;
+    div {
+      @media #{$tablt} {
+        margin-top: 5px;
+      }
+      img {
+        width: 100%;
+        @media #{$tablt} {
+          width: 80%;
+          display: block;
+          margin: auto;
+        }
+      }
+    }
+  }
+}
+// ################ section .Premium-Products ################
+.Premium-Products {
+  h2 {
+    text-align: center;
+  }
+  button {
+    margin: auto;
+    margin-top: 30px;
+  }
+}
+// ################ section .Features ################
+.Features {
+  background-color: $bg;
+  .image {
+    height: 110px;
+  }
+}
+// ################ section .Portfolio ################
+.Portfolio {
+  text-align: center;
+  button {
+    margin: auto;
+    margin-top: 15px;
+  }
+  img{
+    width: 100%;
+  }
+  .content > div:not(:first-child)
+  {
+     display: none;
+  
+}
+  ul {
+    justify-content: space-between;
+    width: 35%;
+    margin: auto;
+    .active{
+      color: $maincolor;
+      border-bottom: 4px solid $hoverColor;
+    }
+    @media #{$mobil} {
+      width: 100%;
+    }
+    li {
+      color: $pr;
+      cursor: pointer;
+     transition: 0.2s;
+     
+    }
+   
+}
+}
+// ################ section .Clients ################
+.Clients {
+  position: relative;
+  min-height: 600px;
+  &::before {
+    content: "";
+    position: absolute;
+    background-color: $bg;
+    width: 100%;
+    height: 50%;
+    top: 18%;
+    z-index: -1;
+    @media #{$mobil} {
+    display: none;   
+    }
+    @media #{$tablt} {
+      height: 60%;
+    top: 15%;
+      }
+  }
+  .text {
+    margin-top: 5%;
+    text-align: center;
+    blockquote {
+      display: block;
+    }
+    blockquote q::before,
+    blockquote q::after {
+      font-size: 55px;
+      color: $pr;
+      // display: inline-block;
+      font-family: initial;
+      @media #{$mobil} {
+        font-size: 30px;
+        
+        }
+    }
+    span{
+      color: $pr;
+    }
+  }
+  .image {
+      position: relative;
+      z-index: 3;
+     .animated {
+        position: absolute;
+        left: -90px;
+        bottom: -100px;
+        @media #{$mobil} {
+          display: none;
+        }
+        @media #{$tablt} {
+          display: none;
+        }
+      }
+      &::before {
+        position: absolute;
+        content: "";
+        width: 300px;
+        height: 300px;
+        top: 30%;
+        background-color: $maincolor;
+        z-index: -1;
+        left: -30px;
+        border-radius: 20px;
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        -ms-border-radius: 20px;
+        -o-border-radius: 20px;
+        @media #{$mobil} {
+          display: none;
+        }
+       
+      
+    }
+  }
+}
+// ################ section .Trusted-Partners################
+
+.Trusted-Partners {
+  background-color: $bg;
+  h2 {
+    text-align: center;
+  }
+  .row{
+    @media #{$mobil} {
+      &:last-child
+      {
+        margin-bottom: 15px;
+      }
+      gap: 30px;
+      div{
+        img{
+          display: block;
+          margin: auto;
+        }
+      }
+     
+      
+    }
+  }
+}
